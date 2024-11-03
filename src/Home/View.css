@@ -1,0 +1,169 @@
+.view-Box {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 48px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    z-index: 1;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .view-Box .Back {
+    display: flex;
+    font-size: 20px;
+    justify-content: start;
+    gap: 5px;
+    width: 100%;
+    padding: 20px 50px;
+  }
+  .view-Box .Back i {
+    font-weight: 900;
+  }
+  .view-Box .Back h4 {
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+  }
+  .view-Box .View-item {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+  }
+  .view-Box .View-item .view-img {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .view-Box .View-item .view-img img {
+    height: 100%;
+    width: 90%;
+    border: 2px solid black;
+  }
+  
+  /* // product detail  */
+  .view-Box .View-item .view-detail {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .view-Box .View-item .view-detail .category {
+    font-family: sans-serif;
+    color: grey;
+    font-size: 17px;
+  }
+  
+  .view-Box .View-item .view-detail div h4 {
+    font-family: sans-serif;
+    margin-top: 10px;
+    font-size: 31px;
+  }
+  .view-Box .View-item .view-detail .detail-price {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .view-Box .View-item .view-detail .detail-price p {
+    font-size: 18px;
+  
+    font-family: sans-serif;
+  }
+  .view-Box .View-item .view-detail .detail-price .Size-detail {
+    max-width: 110px;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px 10px;
+  }
+  .view-Box .View-item .view-detail .detail-price .add-detail {
+    display: flex;
+    gap: 10px;
+    margin-top: 7px;
+    width: 100%;
+  }
+  .view-Box .View-item .view-detail .detail-price .add-detail input {
+    width: 40px;
+    text-align: center;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.477);
+  }
+  .view-Box .View-item .view-detail .detail-price .add-detail button {
+    padding: 2px 10px;
+    background-color: #013237;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid black;
+  }
+  .view-Box .View-item .view-detail .detail-price .add-detail button:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+  }
+  .view-Box .View-item .view-detail .detail-price .add-detail button:active {
+    transition: all 0.3s ease;
+    transform: scale(1);
+  }
+  .view-Box .View-item .view-detail .detail-price .detail-info {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+    flex-direction: column;
+    height: 100%;
+  }
+  .view-Box .View-item .view-detail .detail-price .detail-info h4 {
+    font-size: 23px;
+    font-family: sans-serif;
+  }
+  .view-Box .View-item .view-detail .detail-price .detail-info p {
+    font-size: 15px;
+    font-family: sans-serif;
+  }
+  @media (max-width: 600px) {
+    .view-Box {
+      overflow: auto;
+    }
+    .view-Box::-webkit-scrollbar{
+      display: none;
+    }
+    .view-Box .Back {
+      display: flex;
+      position: fixed;
+      top: 48px;
+      background-color: white;
+      width: 100%;
+      z-index: 1;
+      padding: 10px 20px;
+    }
+    .view-Box .View-item {
+      display: flex;
+      gap: 10px;
+      margin-top: 44px;
+      flex-direction: column;
+      width: 90%;
+    }
+    .view-Box .Back {
+        padding: 20px 15px;
+      }
+    .view-Box .View-item .view-img {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .view-Box .View-item .view-img img {
+      width: 100%;
+    }
+    .view-Box .View-item .view-detail {
+      width: 100%;
+      height: 100%;
+    }
+    .view-Box .View-item .view-detail .detail-price {
+      margin-bottom: 50px;
+    }
+  }
+  

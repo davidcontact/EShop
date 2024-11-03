@@ -454,8 +454,38 @@
 .Card-product .box-cart .item-card div p {
   font-size: 14px;
   font-family: sans-serif;
-  width: 50px;
+  width: 90px;
   text-align: center;
+}
+.Card-product .box-cart .item-card div .quantify{
+  width: 60px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Card-product .box-cart .item-card div .quantify .handleDecrease{
+  border: 1px solid black;
+  padding: 0px 6px;
+  border-radius: 6px;
+}
+
+.Card-product .box-cart .item-card div .quantify .handleDecrease:active{
+  scale: 0.9;
+  transition: all 0.3s ease;
+}
+
+.Card-product .box-cart .item-card div .quantify .handleIncrease{
+  border: 1px solid black;
+  padding: 0px 6px;
+  border-radius: 6px;
+}
+
+.Card-product .box-cart .item-card div .quantify .handleIncrease:active{
+  scale: 0.9;
+  transition: all 0.3s ease;
 }
 /* // total price */
 
@@ -480,7 +510,7 @@
 }
 .Card-product .box-cart .total-price div p {
   font-family: sans-serif;
-  width: 70px;
+  width: 104px;
   text-align: center;
   border-bottom: 1px solid black;
 }

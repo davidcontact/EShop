@@ -13,11 +13,11 @@ export default function Header({ cart, setshowCart, showCart }) {
               className="fa-solid fa-bars"
               onClick={() => {
                 setshowCart(true);
-                setmenu(!menu);
+                // setmenu(!menu);
               }}
             ></i>
             <a href="/" className="h4">
-              E-Commerce Shop
+              EShop
             </a>
           </div>
           <div className="Navlink" onClick={() => setmenu(true)}>
