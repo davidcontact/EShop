@@ -26,7 +26,8 @@ export default function Header({ cart, setshowCart, showCart }) {
               <i
                 className="fa-solid fa-cart-shopping"
                 onClick={() => {
-                  setshowCart(!showCart);
+                  setshowCart((prevShowCart) => !prevShowCart); // Toggle showCart
+                  // console.log("Cart visibility toggled to:", !showCart);
                 }}
               >
                 <p>{cart}</p>
