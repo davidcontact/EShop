@@ -92,7 +92,7 @@ export default function CartShop({ cart, setCart, setshowCart }) {
             </div>
           ))}
           <div className="total-price">
-            <h4>Total Price of your Cart Order</h4>
+            <h4>Total Price</h4>
             <div>
               <p>{price.toFixed(2)} $</p>
               <button className="order" onClick={() => Order()}>

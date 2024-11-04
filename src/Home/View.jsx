@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "./View.css";
+
 
 
 export default function View({
@@ -41,11 +43,12 @@ export default function View({
                   <option value="XL">Size: XL</option>
                 </select>
                 <div className="add-detail">
-                  <input type="number" min="1" defaultValue="1" />
+                  {/* <input type="number" min="1" defaultValue="1" className="quantify"/> */}
                   <button
                     onClick={() => {
+                      console.log("testing")
                       addView(product);
-                      setCart((prevCart) => [...prevCart, product]);
+                      // setCart((prevCart) => [...prevCart, product]);
                     }}
                   >
                     Add To Cart
@@ -58,6 +61,7 @@ export default function View({
               </div>
             </div>
           </div>
+          <Footer/>
         </div>
       ))}
     </>

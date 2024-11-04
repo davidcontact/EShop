@@ -10,7 +10,7 @@ export default function Header({ cart, setshowCart, showCart }) {
         <div className="Fix">
           <div className="logo">
             <i
-              className="fa-solid fa-bars"
+              className="fa-solid fa-bars this-menu"
               onClick={() => {
                 setshowCart(true);
                 // setmenu(!menu);

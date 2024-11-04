@@ -17,7 +17,7 @@ const data = [
     image:
       "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
     price: 22.3,
-    title: "Mens Casual Premium Slim Fit T-Shirts ",
+    title: "Mens Fit T-Shirts ",
     quantity: 20,
   },
   {
@@ -49,7 +49,7 @@ const data = [
     image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
     price: 695,
     title:
-      "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+      "Dragon Station Chain",
     quantity: 20,
   },
   {
@@ -59,7 +59,7 @@ const data = [
     id: 6,
     image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
     price: 168,
-    title: "Solid Gold Petite Micropave ",
+    title: "Solid Gold Petite",
     quantity: 20,
   },
   {
@@ -81,7 +81,7 @@ const data = [
     image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
     price: 10.99,
 
-    title: "Pierced Owl Rose Gold Plated Stainless Steel Double",
+    title: "Pierced Owl Rose Gold",
     quantity: 20,
   },
   {
@@ -91,7 +91,7 @@ const data = [
     id: 9,
     image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
     price: 64,
-    title: "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
+    title: "WD 2TB Elements Portable",
     quantity: 20,
   },
   {
@@ -101,7 +101,7 @@ const data = [
     id: 10,
     image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
     price: 109,
-    title: "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+    title: "SanDisk SSD PLUS 1TB",
     quantity: 20,
   },
   {
@@ -112,7 +112,7 @@ const data = [
     image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
     price: 109,
     title:
-      "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+      "Silicon Power 256GB",
     quantity: 20,
   },
 
@@ -125,7 +125,7 @@ const data = [
     price: 114,
 
     title:
-      "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+      "WD 4TB Gaming",
     quantity: 20,
   },
   {
@@ -136,7 +136,7 @@ const data = [
     image: "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
     price: 599,
 
-    title: "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
+    title: "Acer SB220Q bi 21.5 inc",
     quantity: 20,
   },
   {
@@ -148,7 +148,7 @@ const data = [
     price: 999.99,
 
     title:
-      "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
+      "Samsung 49-Inch",
     quantity: 20,
   },
   {
@@ -158,7 +158,7 @@ const data = [
     id: 15,
     image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
     price: 56.99,
-    title: "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+    title: "Jacket Winter Coats",
     quantity: 20,
   },
   {
@@ -170,7 +170,7 @@ const data = [
     price: 29.95,
 
     title:
-      "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+      "Moto Biker Jacket",
     quantity: 20,
   },
   {
@@ -180,7 +180,7 @@ const data = [
     id: 17,
     image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
     price: 39.99,
-    title: "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+    title: "Rain Jacket Women",
     quantity: 20,
   },
   {
@@ -190,7 +190,7 @@ const data = [
     id: 18,
     image: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
     price: 9.85,
-    title: "MBJ Women's Solid Short Sleeve Boat Neck V ",
+    title: "Short Sleeve Boat Neck V ",
     quantity: 20,
   },
   {
@@ -201,7 +201,7 @@ const data = [
     image: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
     price: 7.95,
 
-    title: "Opna Women's Short Sleeve Moisture",
+    title: "Opna Women's Short",
     quantity: 20,
   },
   {
@@ -211,7 +211,7 @@ const data = [
     id: 20,
     image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
     price: 12.99,
-    title: "DANVOUY Womens T Shirt Casual Cotton Short",
+    title: "Womens T Shirt",
     quantity: 20,
   },
 ];

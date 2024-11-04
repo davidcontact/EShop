@@ -1,7 +1,9 @@
 /* eslint-disable no-self-compare */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import img1 from "../assets/d1.jpg";
@@ -20,19 +22,21 @@ export default function Index() {
   // add To Cart
   function addToCart(item) {
     console.log(item);
-    let isPresent = false;
-    cart.forEach((product) => {
-      if (product.id === item.id) isPresent = true;
+    setCart(currentCart => {
+      const existingItem = currentCart.find(cartItem => cartItem.id === item.id);
+      if (existingItem) {
+        toast.success("This item is already added to the cart!");
+        return currentCart.map(product => 
+          product.id === item.id 
+            ? { ...product, quantity: product.quantity + 1 }
+            : product // Don't forget to return the product if it isn't the one being updated
+        );
+      }
+      toast.success("Item added to the cart!");
+      return [...currentCart, { ...item, quantity: 1 }];
     });
-    // if (isPresent) {
-    //   setwarning(true);
-    //   setTimeout(() => {
-    //     setwarning(false);
-    //   }, 2000);
-    //   return;
-    // }
-    setCart([...cart, item]);
   }
+  
 
   // view product
   function ViewClick(item) {
@@ -47,15 +51,34 @@ export default function Index() {
   }
 
   // add to cart in view
-  function addView(product) {
-    console.log(product);
-    let Present = false;
-    view.forEach((product) => {
-      if (product.id === product.id) Present = true;
+  function addView(item) {
+    setCart(currentCart => {
+      const existingItem = currentCart.find(cartItem => cartItem.id === item.id);
+      if (existingItem) {
+        // toast.success("This item is already added to the cart!");
+        return currentCart.map(product => 
+          product.id === item.id 
+            ? { ...product, quantity: product.quantity + 1 }
+            : product // Don't forget to return the product if it isn't the one being updated
+        );
+      }
+      // toast.success("Item added to the cart!");
+      return [...currentCart, { ...item, quantity: 1 }];
     });
-    setCart([...cart, product]);
     setView([]);
   }
+
+  // alert message
+  // useEffect(() => {
+  //   if (cart.length > 0) {
+  //     const lastAddedItem = cart[cart.length - 1]; // Get the last added item
+  //     if (lastAddedItem.quantity === 1) {
+  //       toast.success("Item added to the cart!");
+  //     } else {
+  //       toast.success("This item is already added to the cart!");
+  //     }
+  //   }
+  // }, [cart]);
   
   return (
     <>
@@ -69,7 +92,15 @@ export default function Index() {
       ) : (
         <CartShop cart={cart} setCart={setCart} setshowCart={setshowCart} />
       )}
-
+      <ToastContainer 
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        closeOnClick
+        draggable
+        pauseOnHover
+        style={{ marginTop: '47px' }}
+      />
       <div className="space2">
         <div className="NameShop">
           <div className="intro">
