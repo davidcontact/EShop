@@ -7,9 +7,12 @@ export default function Header({ setshowCart }) {
   const [cartCount, setCartCount] = useState(0);
 
       const cartData = JSON.parse(localStorage.getItem('cart'));
-
+      const find = localStorage.getItem('cart');
+      
       // If cartData is valid and an array, use its length; otherwise, default to 0
-      const count = cartData.length;
+      // const count = cartData.length;
+      const count = 1;
+
 
   
   return (
@@ -38,7 +41,7 @@ export default function Header({ setshowCart }) {
                   // console.log("Cart visibility toggled to:", !showCart);
                 }}
               >
-                <p>{count}</p>
+                {/* <p>{count}</p> */}
               </i>
               <p className="cart1">Cart</p>
             </div>

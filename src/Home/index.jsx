@@ -18,9 +18,11 @@ export default function Index() {
   const [view, setView] = useState([]);
   const [cart, setCart] = useState([]);
   const [showCart, setshowCart] = useState(true);
-
+  const DataStorage = [];
+  // localStorage.removeItem("cart");
   // add To Cart
   function addToCart(item) {
+
     console.log(item);
     const currentCart = JSON.parse(localStorage.getItem("cart")) || [];
     const existingItem = currentCart.find(
