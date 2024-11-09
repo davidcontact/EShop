@@ -1,11 +1,17 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // eslint-disable-next-line react/prop-types
 export default function Header({ setshowCart }) {
   const [menu, setmenu] = useState(true);
-  const cartData = JSON.parse(localStorage.getItem('cart'));
-  const Cart = cartData.length;
+  const [cartCount, setCartCount] = useState(0);
+
+      const cartData = JSON.parse(localStorage.getItem('cart'));
+
+      // If cartData is valid and an array, use its length; otherwise, default to 0
+      const count = cartData.length;
+
+  
   return (
     <>
       <div className="header">
@@ -32,7 +38,7 @@ export default function Header({ setshowCart }) {
                   // console.log("Cart visibility toggled to:", !showCart);
                 }}
               >
-                <p>{Cart}</p>
+                <p>{count}</p>
               </i>
               <p className="cart1">Cart</p>
             </div>
