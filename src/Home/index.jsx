@@ -57,9 +57,8 @@ export default function Index() {
   return (
     <>
       <Header
-        cartData={cartData}
         setshowCart={setshowCart}
-        showCart={showCart}
+        // showCart={showCart}
       />
       {showCart ? (
         " "

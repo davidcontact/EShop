@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
-export default function Header({ cartData, setshowCart, showCart }) {
+export default function Header({ setshowCart }) {
   const [menu, setmenu] = useState(true);
   return (
     <>
@@ -11,10 +11,10 @@ export default function Header({ cartData, setshowCart, showCart }) {
           <div className="logo">
             <i
               className="fa-solid fa-bars this-menu"
-              onClick={() => {
-                setshowCart(true);
-                // setmenu(!menu);
-              }}
+              // onClick={() => {
+              //   setshowCart(true);
+              //   // setmenu(!menu);
+              // }}
             ></i>
             <a href="/" className="h4">
               EShop
@@ -30,7 +30,7 @@ export default function Header({ cartData, setshowCart, showCart }) {
                   // console.log("Cart visibility toggled to:", !showCart);
                 }}
               >
-                <p>{cartData}</p>
+                <p>{1}</p>
               </i>
               <p className="cart1">Cart</p>
             </div>
@@ -54,9 +54,9 @@ export default function Header({ cartData, setshowCart, showCart }) {
                   Register
                 </a>
                 <i
-                  onClick={() => {
-                    setshowCart(true);
-                  }}
+                  // onClick={() => {
+                  //   setshowCart(true);
+                  // }}
                   className="fa-solid fa-arrow-left"
                 ></i>
               </div>
