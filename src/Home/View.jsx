@@ -71,9 +71,7 @@ export default function View({
   // Access the product data that was passed
   const product = state?.product || Data.find((item) => item.id === parseInt(id));
 
-  if (!product) {
-    return <p>No product data found {id}</p>;
-  }
+
   return (
     <>
       <Header setshowCart={setshowCart} />
