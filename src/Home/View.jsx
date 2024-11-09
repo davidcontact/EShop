@@ -8,23 +8,6 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import Data from "../Data/Data";
 
-// export default function View({
-//   setCart,
-//   view,
-//   setView,
-//   addView,
-//   cart,
-//   setshowCart,
-// }) {
-//   function handleRemove(id) {
-//     const arr = view.filter((product) => product.id !== id);
-//     setView(arr);
-//   }
-
-//   return (
-
-//   );
-// }
 export default function View({
   // setCart,
   view,
@@ -70,7 +53,7 @@ export default function View({
   const { id } = useParams(); // Get the id from the URL (in case you need it)
   // Access the product data that was passed
   const product = state?.product || Data.find((item) => item.id === parseInt(id));
-
+  console.log(product + 'mjnhbgvy');
 
   return (
     <>

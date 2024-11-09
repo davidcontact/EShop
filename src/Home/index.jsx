@@ -89,15 +89,7 @@ export default function Index() {
           <img src={img3} className="img1" />
         </div>
       </div>
-      <View
-        setCart={setCart}
-        view={view}
-        setView={setView}
-        addToCart={addToCart}
-        cart={cart.length}
-        setshowCart={setshowCart}
-      />
-      {/* <Product addToCart={addToCart} ViewClick={ViewClick} /> */}
+      
       <Product addToCart={addToCart} />
 
       <Footer />
