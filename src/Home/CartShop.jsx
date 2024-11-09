@@ -33,6 +33,9 @@ export default function CartShop({ cart, setCart, setshowCart }) {
     alert("Your Order Complete!👌");
     const arr = cartData.filter((product) => product === "");
     setCart(arr);
+    const empty = [];
+    localStorage.setItem("cart", JSON.stringify(empty));
+
   }
 
   function handleDecrease(itemId) {

@@ -4,6 +4,8 @@ import React, { useState } from "react";
 // eslint-disable-next-line react/prop-types
 export default function Header({ setshowCart }) {
   const [menu, setmenu] = useState(true);
+  const cartData = JSON.parse(localStorage.getItem('cart'));
+  // const Cart = cartData.length;
   return (
     <>
       <div className="header">
@@ -30,7 +32,7 @@ export default function Header({ setshowCart }) {
                   // console.log("Cart visibility toggled to:", !showCart);
                 }}
               >
-                <p>{1}</p>
+                <p>1</p>
               </i>
               <p className="cart1">Cart</p>
             </div>

@@ -94,7 +94,6 @@ export default function View({
                 {/* <input type="number" min="1" defaultValue="1" className="quantify"/> */}
                 <button
                   onClick={() => {
-                    console.log("testing");
                     addToCart(product);
                     // setCart((prevCart) => [...prevCart, product]);
                   }}

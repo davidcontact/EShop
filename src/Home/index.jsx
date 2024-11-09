@@ -53,7 +53,6 @@ export default function Index() {
     setCart(newCart);
   }
 
-  const cartData = 1;
   return (
     <>
       <Header
