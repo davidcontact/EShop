@@ -389,13 +389,15 @@
 .Card-product {
   position: absolute;
   margin-top: 50px;
-  inset: 0;
+  /* inset: 0; */
+  background-color: #07464d;
   position: fixed;
+  right: 0;
   top: -2px;
   height: 70vh;
   display: flex;
   justify-content: end;
-  width: 100%;
+  /* width: 50%; */
   z-index: 1;
 }
 .Card-product .box-cart {

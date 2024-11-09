@@ -6,6 +6,7 @@ import "./App.css";
 import User from "./Auth/Login";
 import Register from "./Auth/Register";
 import Account from "./Auth/User";
+import Detail from "./Home/View"
 export default function App() {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/Login" element={<User />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/User" element={<Account/>}/>
+          <Route path="/index/:id" element={<Detail/>}/>
         </Routes>
       </div>
     </BrowserRouter>

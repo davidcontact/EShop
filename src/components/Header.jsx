@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
-export default function Header({ cart, setshowCart, showCart }) {
+export default function Header({ cartData, setshowCart, showCart }) {
   const [menu, setmenu] = useState(true);
   return (
     <>
@@ -30,7 +30,7 @@ export default function Header({ cart, setshowCart, showCart }) {
                   // console.log("Cart visibility toggled to:", !showCart);
                 }}
               >
-                <p>{cart}</p>
+                <p>{cartData}</p>
               </i>
               <p className="cart1">Cart</p>
             </div>

@@ -1,10 +1,12 @@
+/* eslint-disable no-template-curly-in-string */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
 import data from "../Data/Data";
 
-function Product({ addToCart, ViewClick }) {
+function Product({ addToCart }) {
   const [search, setSearch] = useState("");
   return (
     <>
@@ -35,7 +37,16 @@ function Product({ addToCart, ViewClick }) {
                 <h4>{item.title}</h4>
                 <p>{item.price}$</p>
                 <button onClick={() => addToCart(item)}>Add To Cart</button>
-                <button onClick={() => ViewClick(item)}>View Item</button>
+                {/* <button onClick={() => ViewClick(item)}>View Item</button> */}
+                <Link
+                  className="viewDetail"
+                  to={{
+                    pathname: `/index/${item.id}`, // The URL path
+                    state: { product: item }, // Passing the product data in state
+                  }}
+                >
+                  View Item
+                </Link>
               </div>
             ))}
         </div>

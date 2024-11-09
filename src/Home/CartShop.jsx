@@ -1,47 +1,62 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function CartShop({ cart, setCart, setshowCart }) {
   const [price, setPrice] = useState(0);
 
+  const cartData = JSON.parse(localStorage.getItem("cart"));
+  
   // Remove Product
   function handleRemove(id) {
-    const arr = cart.filter((product) => product.id !== id);
-    setCart(arr);
+    console.log(id);
+    const updatedCart = cart.filter((product) => product.id !== id);
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    toast.success("Item removed from cart!");
   }
 
   // Total Price Product
   function totalPrice() {
-    const total = cart.reduce((acc, product) => acc + product.price * product.quantity, 0);
+    const total = cartData.reduce(
+      (acc, product) => acc + product.price * product.quantity,
+      0
+    );
     setPrice(total);
   }
+
   useEffect(() => {
     totalPrice();
   });
   // Order Item
   function Order() {
     alert("Your Order Complete!👌");
-    const arr = cart.filter((product) => product === "");
+    const arr = cartData.filter((product) => product === "");
     setCart(arr);
   }
 
   function handleDecrease(itemId) {
-    setCart(
-      cart.map((item) =>
-        item.id === itemId && item.quantity > 1
-          ? { ...item, quantity: item.quantity - 1 }
-          : item
-      )
+    // Update cart state by decreasing the quantity of the product with the matching id
+    const updatedCart = cart.map((item) =>
+      item.id === itemId && item.quantity > 1
+        ? { ...item, quantity: item.quantity - 1 }
+        : item
     );
+    setCart(updatedCart);
+
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   }
 
   function handleIncrease(itemId) {
-    setCart(
-      cart.map((item) =>
-        item.id === itemId ? { ...item, quantity: item.quantity + 1 } : item
-      )
+    const updatedCart = cart.map((item) =>
+      item.id === itemId ? { ...item, quantity: item.quantity + 1 } : item
     );
+
+    // Update state
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   }
+
   return (
     <>
       <div id="Cart" className="Card-product">
@@ -61,7 +76,7 @@ export default function CartShop({ cart, setCart, setshowCart }) {
               ></i>
             </p>
           </h5>
-          {cart.map((product) => (
+          {cartData.map((product) => (
             <div className="item-card" key={product.id}>
               <img className="cart-img" src={product.image} alt="" />
               <div>
