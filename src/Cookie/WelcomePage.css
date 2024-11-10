@@ -150,4 +150,22 @@
     transition: all 0.3 ease;
     background-color: #3498db;
   }
-  
+  @media (max-width: 600px) {
+    .features-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-top: 3rem;
+        transform: translateY(40px);
+        opacity: 0;
+        transition: all 1s ease-out 0.5s;
+      }
+      .feature-card {
+        padding: 1.5rem;
+        background-color: white;
+        border-radius: 1rem;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+      }
+  }

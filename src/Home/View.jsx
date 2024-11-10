@@ -108,9 +108,11 @@ export default function View({
             </div>
           </div>
         </div>
-        <Footer />
+        
       </div>
       {/* ))} */}
+      <Footer />
+
     </>
   );
 }
