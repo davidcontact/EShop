@@ -5,8 +5,7 @@ export default function Footer() {
           <div className="boxing">
             <h4>About</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate in voluptas molestias. Dolore consequuntur aperiam, ipsum nisi dolores ducimus, consectetur labore temporibus repellendus sit, velit saepe nesciunt corrupti dolorum eligendi!
-            </p>
+            It refers to the percentage of visitors to your site who complete a desired action, like making a purchase. High conversion rates are a key goal for e-commerce businesses, as they indicate that the site is effectively encouraging users to take action (like buying a product or signing up for a service).            </p>
           </div>
           <div className="boxing">
             <h4>Categories</h4>

@@ -13,7 +13,6 @@ export default function CartShop({ cart, setCart, setshowCart }) {
     const updatedCart = cart.filter((product) => product.id !== id);
     setCart(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
-    toast.success("Item removed from cart!");
   }
 
   // Total Price Product

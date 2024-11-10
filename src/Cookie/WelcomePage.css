@@ -39,7 +39,8 @@
   .hero-title {
     font-size: 3rem;
     font-weight: bold;
-    background: linear-gradient(to right, #8e44ad, #3498db);
+    background-color: #07464d;
+    /* background: linear-gradient(to right, #8e44ad, #3498db); */
     -webkit-background-clip: text;
     color: transparent;
     margin-bottom: 1rem;
@@ -53,8 +54,10 @@
   }
   
   .features-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+    display: flex;
+    justify-content: center;
     gap: 1.5rem;
     margin-top: 3rem;
     transform: translateY(40px);
@@ -135,7 +138,7 @@
     text-align: center;
   }
   .Get-start{
-    background-color: #3498db;
+    background-color: #07464d;
     padding: 8px 15px;
     border-radius: 10px;
     color: white;
@@ -148,7 +151,7 @@
   }
   .Get-start:active{
     transition: all 0.3 ease;
-    background-color: #3498db;
+    background-color: #07464d;
   }
   @media (max-width: 600px) {
     .features-grid {

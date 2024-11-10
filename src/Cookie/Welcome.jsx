@@ -63,7 +63,7 @@ const WelcomePage = () => {
                   pathname: `/index`, // The URL path
                 }}
               >
-                Get Start
+                Click On Get Start
               </Link>
               <p className="cta-subtext">
                 No credit card required • Free trial available
