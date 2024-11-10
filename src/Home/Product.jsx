@@ -8,9 +8,13 @@ import data from "../Data/Data";
 
 function Product({ addToCart }) {
   const [search, setSearch] = useState("");
+  // function remove(){
+  //   localStorage.removeItem("cart");
+  // }
   return (
     <>
       <div className="itemApi">
+        {/* <button onClick={remove}>Remove local</button> */}
         <h4 className="reComment">
           Recommended&nbsp; <p>Product</p>
         </h4>

@@ -6,15 +6,22 @@ export default function Header({ setshowCart }) {
   const [menu, setmenu] = useState(true);
   const [cartCount, setCartCount] = useState(0);
 
-      const cartData = JSON.parse(localStorage.getItem('cart'));
-      const find = localStorage.getItem('cart');
-      
-      // If cartData is valid and an array, use its length; otherwise, default to 0
-      // const count = cartData.length;
-      const count = 1;
+  const cartData = JSON.parse(localStorage.getItem("cart"));
+  console.log(cartData);
+  /* eslint-disable no-use-before-define */
+  let count;
+  /* eslint-disable no-use-before-define */
 
+  if (cartData == null) {
+    count = 0;
+    console.log(count);
+  }else{
+    count = cartData.length;
+    console.log(count);
+  }
+  // If cartData is valid and an array, use its length; otherwise, default to 0
+  // const count = cartData.length;
 
-  
   return (
     <>
       <div className="header">
@@ -27,7 +34,7 @@ export default function Header({ setshowCart }) {
               //   // setmenu(!menu);
               // }}
             ></i>
-            <a href="/" className="h4">
+            <a href="/index" className="h4">
               EShop
             </a>
           </div>
@@ -41,7 +48,7 @@ export default function Header({ setshowCart }) {
                   // console.log("Cart visibility toggled to:", !showCart);
                 }}
               >
-                {/* <p>{count}</p> */}
+                <p>{count}</p>
               </i>
               <p className="cart1">Cart</p>
             </div>

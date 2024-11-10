@@ -69,7 +69,7 @@ export default function View({
       />
       {/* {product.map((product) => ( */}
       <div className="view-Box">
-        <a className="Back" href="/">
+        <a className="Back" href="/index">
           <i className="fa-solid fa-angles-left"></i>
           <h4>Back</h4>
         </a>

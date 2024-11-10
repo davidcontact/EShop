@@ -637,6 +637,9 @@
     padding: 0 10px;
     height: 160px;
   }
+  .Card-product {
+    width: 100%;
+  }
   .Card-product .box-cart .item-card {
     display: flex;
     width: 100%;
