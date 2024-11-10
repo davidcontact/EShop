@@ -1,10 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
-
+import CartShop from '../Home/CartShop'
 // eslint-disable-next-line react/prop-types
 export default function Header({ setshowCart }) {
-  const [menu, setmenu] = useState(true);
+  const [menu, setMenu] = useState(true);
+  const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0);
+  const [showCart, setshowCarts] = useState(true);
 
   const cartData = JSON.parse(localStorage.getItem("cart"));
   console.log(cartData);
@@ -21,30 +23,34 @@ export default function Header({ setshowCart }) {
   }
   // If cartData is valid and an array, use its length; otherwise, default to 0
   // const count = cartData.length;
-
+  const toggleMenu = () => {
+    setMenu(!menu);
+  };
   return (
     <>
+    {showCart ? (
+        " "
+      ) : (
+        <CartShop setCart={setCart} setshowCarts={setshowCarts} />
+      )}
       <div className="header">
         <div className="Fix">
           <div className="logo">
             <i
               className="fa-solid fa-bars this-menu"
-              // onClick={() => {
-              //   setshowCart(true);
-              //   // setmenu(!menu);
-              // }}
+              onClick={toggleMenu}
             ></i>
             <a href="/index" className="h4">
               EShop
             </a>
           </div>
-          <div className="Navlink" onClick={() => setmenu(true)}>
+          <div className="Navlink" onClick={() => setMenu(true)}>
             {/* Cart */}
             <div className="cart">
               <i
                 className="fa-solid fa-cart-shopping"
                 onClick={() => {
-                  setshowCart((prevShowCart) => !prevShowCart); // Toggle showCart
+                  setshowCarts((prevShowCart) => !prevShowCart); // Toggle showCart
                   // console.log("Cart visibility toggled to:", !showCart);
                 }}
               >

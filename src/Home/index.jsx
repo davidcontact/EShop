@@ -58,13 +58,13 @@ export default function Index() {
   return (
     <>
       <Header
-        setshowCart={setshowCart}
+        // setshowCart={setshowCart}
         // showCart={showCart}
       />
       {showCart ? (
         " "
       ) : (
-        <CartShop cart={cart} setCart={setCart} setshowCart={setshowCart} />
+        <CartShop setCart={setCart} setshowCart={setshowCart} />
       )}
       <ToastContainer
         position="top-right"

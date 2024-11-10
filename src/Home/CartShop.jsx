@@ -2,15 +2,17 @@
 import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
-export default function CartShop({ cart, setCart, setshowCart }) {
+export default function CartShop({ cart, setCart, setshowCarts }) {
   const [price, setPrice] = useState(0);
 
   const cartData = JSON.parse(localStorage.getItem("cart"));
-  
+  console.log(cartData);
+  // console.log(cart);
+
   // Remove Product
   function handleRemove(id) {
     console.log(id);
-    const updatedCart = cart.filter((product) => product.id !== id);
+    const updatedCart = cartData.filter((product) => product.id !== id);
     setCart(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   }
@@ -39,7 +41,7 @@ export default function CartShop({ cart, setCart, setshowCart }) {
 
   function handleDecrease(itemId) {
     // Update cart state by decreasing the quantity of the product with the matching id
-    const updatedCart = cart.map((item) =>
+    const updatedCart = cartData.map((item) =>
       item.id === itemId && item.quantity > 1
         ? { ...item, quantity: item.quantity - 1 }
         : item
@@ -50,7 +52,7 @@ export default function CartShop({ cart, setCart, setshowCart }) {
   }
 
   function handleIncrease(itemId) {
-    const updatedCart = cart.map((item) =>
+    const updatedCart = cartData.map((item) =>
       item.id === itemId ? { ...item, quantity: item.quantity + 1 } : item
     );
 
@@ -65,16 +67,13 @@ export default function CartShop({ cart, setCart, setshowCart }) {
         <div className="box-cart">
           <h5
             onClick={() => {
-              setshowCart(true);
+              setshowCarts(true);
             }}
           >
             Shopping Cart{" "}
-            <p>
-              <i
+            <p >
+              <i 
                 className="fa-solid fa-delete-left"
-                onClick={() => {
-                  setshowCart(true);
-                }}
               ></i>
             </p>
           </h5>
