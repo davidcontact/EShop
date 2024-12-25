@@ -80,10 +80,10 @@ export default function Header({ setshowCart }) {
               ""
             ) : (
               <div className="div">
-                <a className="login" href="/Login">
+                <a className="login" href="/index">
                   Login
                 </a>
-                <a className="login" href="/Register">
+                <a className="login" href="/index">
                   Register
                 </a>
                 <i
