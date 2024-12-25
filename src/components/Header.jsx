@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
-import CartShop from '../Home/CartShop'
+import CartShop from '../Home/CartShop';
+import { CSSTransition } from 'react-transition-group';
+
 // eslint-disable-next-line react/prop-types
 export default function Header({ setshowCart }) {
   const [menu, setMenu] = useState(true);
@@ -28,11 +30,19 @@ export default function Header({ setshowCart }) {
   };
   return (
     <>
-    {showCart ? (
+    {/* {showCart ? (
         " "
       ) : (
         <CartShop setCart={setCart} setshowCarts={setshowCarts} />
-      )}
+      )} */}
+      <CSSTransition
+        in={!showCart} // Show when showCart is false
+        timeout={300} // Duration of the transition
+        classNames="Card-product" // Matching the CSS class names for animation
+        unmountOnExit // Remove the component from the DOM when hidden
+      >
+        <CartShop setCart={setCart} setshowCarts={setshowCarts} />
+      </CSSTransition>
       <div className="header">
         <div className="Fix">
           <div className="logo">
@@ -51,7 +61,6 @@ export default function Header({ setshowCart }) {
                 className="fa-solid fa-cart-shopping"
                 onClick={() => {
                   setshowCarts((prevShowCart) => !prevShowCart); // Toggle showCart
-                  // console.log("Cart visibility toggled to:", !showCart);
                 }}
               >
                 <p>{count}</p>

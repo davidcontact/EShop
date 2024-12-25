@@ -19,7 +19,7 @@ export default function Index() {
   const [cart, setCart] = useState([]);
   const [showCart, setshowCart] = useState(true);
   const DataStorage = [];
-  // localStorage.removeItem("cart");
+
   // add To Cart
   function addToCart(item) {
 
