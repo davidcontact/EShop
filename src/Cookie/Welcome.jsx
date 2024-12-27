@@ -84,9 +84,9 @@ const WelcomePage = () => {
               >
                 Click On Get Start
               </Link>
-              <button onClick={handleClick}>
+              {/* <button onClick={handleClick}>
                 Remove LocalStorage
-              </button>
+              </button> */}
               <p className="cta-subtext">
                 No credit card required • Free trial available
               </p>
