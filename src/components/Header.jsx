@@ -76,10 +76,17 @@ export default function Header({ setshowCart }) {
               <p>User</p>
             </div>
             {/* Login */}
-            {menu ? (
+            {/* {menu ? (
               ""
             ) : (
-              <div className="div">
+               */}
+               <CSSTransition
+                in={!menu} // Show when showCart is false
+                timeout={300} // Duration of the transition
+                classNames="div" // Matching the CSS class names for animation
+                unmountOnExit // Remove the component from the DOM when hidden
+              >
+                <div className="div">
                 <a className="login" href="/index">
                   Login
                 </a>
@@ -93,7 +100,8 @@ export default function Header({ setshowCart }) {
                   className="fa-solid fa-arrow-left"
                 ></i>
               </div>
-            )}
+              </CSSTransition>
+            {/* )} */}
           </div>
         </div>
       </div>

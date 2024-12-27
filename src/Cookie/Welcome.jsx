@@ -1,21 +1,40 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./WelcomePage.css"; // Import the CSS file for styles
 const WelcomePage = () => {
+  const Navigate = useNavigate(); 
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
+
+  const Verify = JSON.parse(localStorage.getItem("cart"));
+  if(Verify != null){
+    setTimeout(() => {
+      Navigate('/index'); // Redirect to /index after 2 seconds
+    }, 2000);
+
+    console.log("Success");
+  }
+
   function checkLocal() {
     const local = JSON.parse(localStorage.getItem("cart"));
     const check = [];
     if (local == null) {
       localStorage.setItem("cart", JSON.stringify(check));
+      localStorage.setItem("active", "true");
     } else {
       console.log("Success");
     }
   }
+  const handleClick = () => {
+    alert('Button clicked!');
+    localStorage.removeItem("cart");
+    localStorage.removeItem("active");
+  };
 
   return (
     <div className="welcome-container">
@@ -65,6 +84,9 @@ const WelcomePage = () => {
               >
                 Click On Get Start
               </Link>
+              <button onClick={handleClick}>
+                Remove LocalStorage
+              </button>
               <p className="cta-subtext">
                 No credit card required • Free trial available
               </p>

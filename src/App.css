@@ -284,10 +284,31 @@
 .Card-product-exit-active {
   opacity: 0;
   transform: translateY(50px);
-
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Apply both opacity and transform animations */
 }
 
+.div-enter {
+  opacity: 0; 
+  transform: translateX(-50px);
+}
+
+.div-enter-active {
+  opacity: 1; 
+  transform: translateX(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Apply both opacity and transform animations */
+}
+
+.div-exit {
+  opacity: 1;
+  transform: translateX(0);
+
+}
+
+.div-exit-active {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Apply both opacity and transform animations */
+}
 /* ///// */
 /* Header end */
 /* ///// */
@@ -422,7 +443,7 @@
   position: absolute;
   margin-top: 50px;
   /* inset: 0; */
-  background-color: #07464d;
+  /* background-color: #07464d; */
   position: fixed;
   right: 0;
   top: -2px;
